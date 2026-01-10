@@ -11,12 +11,30 @@ export async function submitContactForm(formData: FormData) {
   const message = formData.get('message') as string;
 
   // Get the Google Apps Script web app URL from environment variable
-  const scriptUrl = process.env.GOOGLE_APPS_SCRIPT_URL;
+  // Try multiple possible variable names (in case of case sensitivity issues)
+  const scriptUrl = process.env.GOOGLE_APPS_SCRIPT_URL || 
+                    process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_URL ||
+                    process.env.google_apps_script_url;
 
+  // Enhanced logging for debugging (will appear in Amplify CloudWatch logs)
   if (!scriptUrl) {
+    const allEnvKeys = Object.keys(process.env);
+    const relevantKeys = allEnvKeys.filter(key => 
+      key.toUpperCase().includes('GOOGLE') || 
+      key.toUpperCase().includes('SCRIPT') ||
+      key.toUpperCase().includes('URL')
+    );
+    console.error('=== FORM CONFIGURATION ERROR ===');
+    console.error('GOOGLE_APPS_SCRIPT_URL is not set');
+    console.error('Total env vars:', allEnvKeys.length);
+    console.error('Relevant env vars found:', relevantKeys);
+    console.error('All env vars (first 20):', allEnvKeys.slice(0, 20));
     revalidatePath('/contact');
     redirect('/contact?error=configuration');
   }
+
+  // Log successful variable access (for verification)
+  console.log('GOOGLE_APPS_SCRIPT_URL is set, length:', scriptUrl?.length || 0);
 
   try {
     // Submit to Google Apps Script web app
