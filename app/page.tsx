@@ -164,11 +164,11 @@ export default function Home() {
             <img
               src="/clientrelation1.png"
               alt="Construction workers pouring concrete"
-              className="h-[250px] sm:h-[300px] md:h-[350px] w-full object-cover rounded-lg lg:ml-16 lg:mt-12 lg:h-[500px]"
+              className="h-[250px] sm:h-[300px] md:h-[350px] w-full object-cover rounded-lg lg:ml-16 lg:mt-22 lg:h-[500px]"
             />
             
             {/* Small Images - Mobile: below large image, Desktop: to the right */}
-            <div className="mt-4 grid grid-cols-2 gap-4 px-4 lg:absolute lg:left-full lg:top-12 lg:grid-cols-1 lg:gap-12 lg:px-0 lg:ml-6">
+            <div className="mt-4 grid grid-cols-2 gap-4 px-4 lg:absolute lg:left-full lg:top-36 lg:grid-cols-1 lg:gap-8 lg:px-0 lg:ml-32">
               <div className="w-full lg:w-48" data-scroll-animate="fade-in-up">
                 <img
                   src="/clientrelation2.png"
@@ -189,15 +189,15 @@ export default function Home() {
           {/* Right Section - Text Content */}
           <div className="flex w-full flex-col bg-[#f5f0e8] px-4 pt-6 pb-12 sm:px-6 sm:pt-8 sm:pb-16 md:px-8 lg:w-[80%] lg:px-12 lg:pt-12 lg:pb-24">
             {/* Title */}
-            <h1 className="mb-6 text-3xl font-bold leading-tight text-[rgb(101,67,33)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" data-scroll-animate="fade-in-up">
+            <h1 className="mb-6 text-3xl font-bold leading-tight text-[rgb(101,67,33)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl lg:pl-34" data-scroll-animate="fade-in-up">
               Client Relations
             </h1>
 
             {/* Paragraphs */}
-            <div className="flex flex-col gap-4 sm:gap-6 lg:ml-16 xl:ml-24" data-scroll-animate="fade-in-up">
+            <div className="flex flex-col gap-4 sm:gap-6 lg:ml-16 xl:ml-24 lg:pl-52 lg:gap-10" data-scroll-animate="fade-in-up">
               {/* First Paragraph */}
               <div className="max-w-2xl">
-                <p className="text-sm leading-relaxed text-[rgb(101,67,33)] sm:text-base md:text-lg pt-4 sm:pt-8 lg:pt-12">
+                <p className="text-sm leading-relaxed text-[rgb(101,67,33)] sm:text-base md:text-lg pt-4 sm:pt-8 lg:pt-8">
                   We believe strong client relationships are built on trust, transparency, and consistent performance. At JHA Engineering Solutions, we work closely with our clients to understand project requirements and provide reliable support throughout execution.
                 </p>
               </div>
