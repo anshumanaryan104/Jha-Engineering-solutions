@@ -16,16 +16,16 @@ export default async function Contact({
       <Navigation />
 
       {/* Main Content Area */}
-      <section className="relative z-10 pt-28 pb-16" data-section-animate>
+      <section className="relative z-10 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-12 md:pb-16" data-section-animate>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           {/* Title */}
-          <h1 className="mb-12 text-center text-5xl font-bold leading-tight text-[rgb(101,67,33)] md:text-6xl lg:text-7xl" data-scroll-animate="fade-in-up">
+          <h1 className="mb-8 text-center text-3xl font-bold leading-tight text-[rgb(101,67,33)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" data-scroll-animate="fade-in-up">
             Contact Us
           </h1>
 
           {/* Contact Form Container */}
           <div 
-            className="relative rounded-xl px-8 py-12 shadow-2xl md:px-12 md:py-16"
+            className="relative rounded-xl px-4 py-8 shadow-2xl sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-12 lg:py-16"
             style={{
               backgroundColor: "rgba(245, 240, 232, 0.95)",
               ...(showSuccess || showError ? { opacity: 1 } : {})
@@ -34,27 +34,27 @@ export default async function Contact({
           >
             {/* Success Message */}
             {showSuccess && (
-              <div className="mb-8 rounded-lg bg-green-100 border-2 border-green-400 px-6 py-4 text-green-900 shadow-lg" style={{ opacity: 1 }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-6 sm:mb-8 rounded-lg bg-green-100 border-2 border-green-400 px-4 py-3 sm:px-6 sm:py-4 text-green-900 shadow-lg" style={{ opacity: 1 }}>
+                <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <p className="text-lg font-bold">Message Sent Successfully!</p>
+                  <p className="text-base sm:text-lg font-bold">Message Sent Successfully!</p>
                 </div>
-                <p className="text-base ml-9">Thank you for contacting us. We will get back to you soon.</p>
+                <p className="text-sm sm:text-base ml-7 sm:ml-9">Thank you for contacting us. We will get back to you soon.</p>
               </div>
             )}
 
             {/* Error Message */}
             {showError && (
-              <div className="mb-8 rounded-lg bg-red-100 border-2 border-red-400 px-6 py-4 text-red-900 shadow-lg" style={{ opacity: 1 }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-6 sm:mb-8 rounded-lg bg-red-100 border-2 border-red-400 px-4 py-3 sm:px-6 sm:py-4 text-red-900 shadow-lg" style={{ opacity: 1 }}>
+                <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <p className="text-lg font-bold">Error Submitting Form</p>
+                  <p className="text-base sm:text-lg font-bold">Error Submitting Form</p>
                 </div>
-                <p className="text-base ml-9">
+                <p className="text-sm sm:text-base ml-7 sm:ml-9">
                   {showError === 'configuration'
                     ? 'Form is not configured. Please contact the administrator.'
                     : 'An error occurred. Please try again later.'}
@@ -164,27 +164,27 @@ export default async function Contact({
             </form>
 
             {/* Contact Information */}
-            <div className="mt-12 border-t border-[rgb(101,67,33)]/20 pt-8" data-scroll-animate={showSuccess || showError ? undefined : "fade-in-up"} style={showSuccess || showError ? { opacity: 1 } : {}}>
-              <h2 className="mb-6 text-center text-2xl font-bold text-[rgb(101,67,33)] md:text-3xl">
+            <div className="mt-8 sm:mt-12 border-t border-[rgb(101,67,33)]/20 pt-6 sm:pt-8" data-scroll-animate={showSuccess || showError ? undefined : "fade-in-up"} style={showSuccess || showError ? { opacity: 1 } : {}}>
+              <h2 className="mb-4 sm:mb-6 text-center text-xl font-bold text-[rgb(101,67,33)] sm:text-2xl md:text-3xl">
                 Get in Touch
               </h2>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
                 <div className="text-center">
-                  <h3 className="mb-2 text-lg font-semibold text-[rgb(101,67,33)]">Email</h3>
-                  <p className="text-base text-[rgb(101,67,33)]/80">
+                  <h3 className="mb-2 text-base sm:text-lg font-semibold text-[rgb(101,67,33)]">Email</h3>
+                  <p className="text-sm sm:text-base text-[rgb(101,67,33)]/80 break-words">
                     info@jhaengineering.com
                   </p>
                 </div>
                 <div className="text-center">
-                  <h3 className="mb-2 text-lg font-semibold text-[rgb(101,67,33)]">Phone</h3>
-                  <p className="text-base text-[rgb(101,67,33)]/80">
+                  <h3 className="mb-2 text-base sm:text-lg font-semibold text-[rgb(101,67,33)]">Phone</h3>
+                  <p className="text-sm sm:text-base text-[rgb(101,67,33)]/80">
                     +1 (555) 123-4567
                   </p>
                 </div>
               </div>
-              <div className="mt-8 text-center">
-                <h3 className="mb-2 text-lg font-semibold text-[rgb(101,67,33)]">Registered Address</h3>
-                <p className="text-base text-[rgb(101,67,33)]/80">
+              <div className="mt-6 sm:mt-8 text-center">
+                <h3 className="mb-2 text-base sm:text-lg font-semibold text-[rgb(101,67,33)]">Registered Address</h3>
+                <p className="text-sm sm:text-base text-[rgb(101,67,33)]/80 px-2">
                   D-203, Ashray Platina, New Ranip, Ahmedabad – 382470, Gujarat, India
                 </p>
               </div>
