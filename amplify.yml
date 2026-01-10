@@ -5,13 +5,8 @@ frontend:
       commands:
         - npm ci
         - echo "Checking environment variables..."
-        - echo "GOOGLE_APPS_SCRIPT_URL is set: $([ -z "$GOOGLE_APPS_SCRIPT_URL" ] && echo 'NO' || echo 'YES')"
-        - |
-          if [ -z "$GOOGLE_APPS_SCRIPT_URL" ]; then
-            echo "WARNING: GOOGLE_APPS_SCRIPT_URL is not set in build environment"
-          else
-            echo "GOOGLE_APPS_SCRIPT_URL is available (length: ${#GOOGLE_APPS_SCRIPT_URL})"
-          fi
+        - echo "GOOGLE_APPS_SCRIPT_URL is set: $([ -z \"$GOOGLE_APPS_SCRIPT_URL\" ] && echo 'NO' || echo 'YES')"
+        - 'if [ -z "$GOOGLE_APPS_SCRIPT_URL" ]; then echo "WARNING: GOOGLE_APPS_SCRIPT_URL is not set"; else echo "GOOGLE_APPS_SCRIPT_URL is available"; fi'
     build:
       commands:
         - npm run build
