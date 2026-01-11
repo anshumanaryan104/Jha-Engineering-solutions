@@ -269,7 +269,7 @@ export default function Home() {
         {/* Main Content - Thank You Text */}
         <div className="relative z-10 text-center">
           {/* Filled "THANK YOU." text */}
-          <h1 className="-mb-8 sm:-mb-10 md:-mb-12 lg:-mb-14 text-4xl font-black leading-none text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl" data-scroll-animate="fade-in-up delay-200">
+          <h1 className="-mb-8 sm:-mb-10 md:-mb-12 lg:-mb-14 text-4xl font-black leading-none text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl lg:pr-4" data-scroll-animate="fade-in-up delay-200">
             THANK YOU.
           </h1>
           {/* Outlined "THANK YOU." text */}
